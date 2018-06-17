@@ -40,7 +40,7 @@ namespace Application
             using (var provider = serviceProvider.GetService<FileDataProvider>())
             {                
                 var tree = provider.GetTree();
-                Console.WriteLine($"[{string.Join(",", tree.Print("x"))}]");
+                Console.WriteLine($"[{string.Join(",", tree.Print(tree.GetVariable().FirstOrDefault()?? "y"))}]");
             }
         }
     }
